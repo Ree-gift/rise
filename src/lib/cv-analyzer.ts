@@ -85,8 +85,8 @@ export function extractTextFromFile(file: File): Promise<string> {
       reader.onload = async () => {
         try {
           const pdfjsLib = await import('pdfjs-dist');
-          const workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.mjs';
-          pdfjsLib.GlobalWorkerOptions.workerSrc = workerSrc;
+          const workerVersion = '3.11.174';
+          pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${workerVersion}/pdf.worker.min.js`;
           const loadingTask = pdfjsLib.getDocument({ data: reader.result as ArrayBuffer });
           const pdf = await loadingTask.promise;
           let text = '';
