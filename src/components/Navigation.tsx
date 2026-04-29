@@ -8,6 +8,7 @@ import {
   Heart, 
   Wrench, 
   Users,
+  FileText,
   Flame
 } from 'lucide-react';
 
@@ -15,6 +16,7 @@ const navItems = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/track', label: 'Track', icon: TrendingDown },
   { href: '/motivation', label: 'Motivate', icon: Heart },
+  { href: '/resume', label: 'Resume', icon: FileText },
   { href: '/optimize', label: 'Optimize', icon: Wrench },
   { href: '/community', label: 'Community', icon: Users },
 ];
